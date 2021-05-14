@@ -17,7 +17,7 @@ import java.lang.reflect.Method;
 public class ParameterAop {
 
     // pointcut
-    @Pointcut("execution( * com.s1dmlgus.fastCamp01.controller..*.*(..))")
+    @Pointcut("execution( * com.s1dmlgus.fastCamp01.aop.controller..*.*(..))")
     private void cut(){
 
         /**
@@ -28,7 +28,7 @@ public class ParameterAop {
          */
     }
 
-    @Before("cut()")
+  //  @Before("cut()")
     public void before(JoinPoint joinpoint){
 
         MethodSignature signature = (MethodSignature) joinpoint.getSignature();
@@ -44,7 +44,7 @@ public class ParameterAop {
 
     }
 
-    @AfterReturning(value = "cut()", returning = "returnObj")
+    //@AfterReturning(value = "cut()", returning = "returnObj")
     public void afterReturn(JoinPoint joinpoint, Object returnObj){
 
         System.out.println("returnObj = " + returnObj);

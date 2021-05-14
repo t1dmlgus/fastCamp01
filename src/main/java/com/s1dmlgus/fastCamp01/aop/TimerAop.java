@@ -13,7 +13,7 @@ import org.springframework.util.StopWatch;
 public class TimerAop {
 
     // pointcut
-    @Pointcut("execution( * com.s1dmlgus.fastCamp01.controller..*.*(..))")
+    @Pointcut("execution( * com.s1dmlgus.fastCamp01.aop.controller..*.*(..))")
     private void cut(){
 
         /**
@@ -24,7 +24,7 @@ public class TimerAop {
          */
     }
 
-    @Pointcut("@annotation(com.s1dmlgus.fastCamp01.annotation.Timer)")
+    @Pointcut("@annotation(com.s1dmlgus.fastCamp01.aop.annotation.Timer)")
     private void enableTimer(){
 
 

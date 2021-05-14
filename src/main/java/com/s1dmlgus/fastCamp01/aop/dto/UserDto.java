@@ -1,4 +1,4 @@
-package com.s1dmlgus.fastCamp01.dto;
+package com.s1dmlgus.fastCamp01.aop.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
