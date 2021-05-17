@@ -13,12 +13,12 @@ class Outer2{
 
         int num = 10;
 
-        class MyRunnable implements Runnable {
-
-            int localNum = 1000;
+        return new Runnable() {
 
             @Override
             public void run() {
+
+                int localNum = 1001;
 
                 // local 변수
                 System.out.println("i = " + i);
@@ -27,16 +27,18 @@ class Outer2{
 
                 System.out.println("outNum = " + outNum + "(외부 클래스 인스턴스 변수)");
                 System.out.println("Outer2.sNum = " + Outer2.sNum + "(외부 클래스 정적 변수)");
-                
-
-
 
 
             }
-        }
-
-        return new MyRunnable();
+        };
     }
+
+    Runnable runnable2 = new Runnable() {
+        @Override
+        public void run() {
+            System.out.println(" Runnable Class ");
+        }
+    };
 
 }
 
@@ -49,8 +51,9 @@ public class AnonumousInnerTest {
 
         // 클래스 호출
         Runnable runnable = outer2.getRunnable(100);
-
         runnable.run();
+
+        outer2.runnable2.run();
 
     }
 }
