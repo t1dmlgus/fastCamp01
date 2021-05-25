@@ -13,7 +13,7 @@ public class FastCamp01Application {
 	{
 		SpringApplication.run(FastCamp01Application.class, args);
 
-		System.out.println(Base64.getEncoder().encodeToString("s1dmlgus@gmail.com".getBytes()));
+		//System.out.println(Base64.getEncoder().encodeToString("s1dmlgus@gmail.com".getBytes()));
 	}
 
 

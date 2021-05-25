@@ -12,7 +12,6 @@ import javax.validation.constraints.Size;
 public class UserDto {
 
 
-
     @NotBlank
     @Size(min = 1, max = 10)
     private String name;
